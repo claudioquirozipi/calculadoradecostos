@@ -16,3 +16,6 @@
 body{
     background: #ede7f6;
 }
+.scrollX {
+    overflow-x: scroll;
+}

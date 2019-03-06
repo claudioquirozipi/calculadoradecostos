@@ -4,6 +4,7 @@ import {
     Grid, 
     Paper, 
     Typography,
+    Button,
 } from '@material-ui/core';
 import { AgregarIngrediente } from './agregarIngrediente';
 
@@ -29,14 +30,21 @@ export const CostoIngredientes = (props) => (
                     Esta aplicación es un prototipo, tiene muchas cosas que mejorar así que si puedes 
                     comunícate conmigo y dime como podemos mejorarla. 
                 </Typography>
+                <Button
+                    className="margintop"
+                    color="primary"
+                    variant="contained"
+                    onClick={props.handleBorrarIngredientes}
+                >Borrar Ingredientes
+                </Button>
             </Paper>
         </Grid>
-        <Grid item xs={9}>
-            <Paper className="padding">
+        <Grid item xs={12} lg={9}>
+            <Paper className="padding scrollX">
                 <TablaIngredientes ci={props.ci} listaCi={props.listaCi}/>
             </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} lg={3}>
             <Paper className="padding">
                 <AgregarIngrediente 
                     handleActualizarFormulario={props.handleActualizarFormulario} 

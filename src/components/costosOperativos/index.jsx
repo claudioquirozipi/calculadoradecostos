@@ -50,12 +50,12 @@ export const CostosOperativos = (props) => (
                 </Button>
             </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} lg={4}>
             <Paper className="padding">
                 <TablaCostos coMes={props.coMes} listaCo={props.listaCo} />
             </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} lg={4}>
             <Paper className="padding">
                 <AgregarCostos 
                     handleAgregarListaCo={props.handleAgregarListaCo}
@@ -63,7 +63,7 @@ export const CostosOperativos = (props) => (
                 />
             </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} lg={4}>
             <Paper className="padding">
                 <Variables handleVariables={props.handleVariables}/>
             </Paper>

@@ -4,10 +4,7 @@ import {
     Toolbar,
     Grid,
     Typography,
-    Link,
-    IconButton,
-    SvgIcon,
-    Icon
+    Link
 } from '@material-ui/core';
 
 export const Nav = (props) => (
@@ -31,18 +28,19 @@ export const Nav = (props) => (
                         justify="flex-end"
                         alignItems="center"
                         item
-                        xs={7}
+                        xs={12}
+                        lg={7}
                         spacing={16}
                     >
                     <Grid item>
-                    <Typography color="inherit">(Co: {props.costos.co} + Ci: {props.costos.ci})*Ga:{props.costos.ga} = Ctotal: </Typography>
+                        <Typography color="inherit">(Co: {props.costos.co} + Ci: {props.costos.ci})*Ga:{props.costos.ga} = Ctotal: </Typography>
                     </Grid>
                     <Grid item>
-                    <Typography 
-                        color="inherit"
-                        variant="display2"
-                        >Bs {props.costos.ctotal}
-                    </Typography>
+                        <Typography 
+                            color="inherit"
+                            variant="display2"
+                            >Bs {props.costos.ctotal}
+                        </Typography>
                     </Grid>
                     </Grid>
             </Grid>

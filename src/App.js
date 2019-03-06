@@ -37,6 +37,7 @@ class App extends Component {
     this.handleAgregarListaCi = this.handleAgregarListaCi.bind(this);
     this.handleActualizarFormulario= this.handleActualizarFormulario.bind(this);
     this.handleReiniciar = this.handleReiniciar.bind(this);
+    this.handleBorrarIngredientes = this.handleBorrarIngredientes.bind(this);
   }
   handleReiniciar() {
     this.setState({
@@ -44,7 +45,9 @@ class App extends Component {
       ListaIngredientes: []
     })
   }
-
+  handleBorrarIngredientes() {
+    this.setState({ListaIngredientes: []})
+  }
   handleVariables(even) {
     switch (even.target.id){
     case "FacturasDia":
@@ -144,6 +147,7 @@ class App extends Component {
           listaCi={this.state.ListaIngredientes} 
           handleActualizarFormulario={this.handleActualizarFormulario}  
           handleAgregarListaCi={this.handleAgregarListaCi}
+          handleBorrarIngredientes={this.handleBorrarIngredientes}
         />
       </div>
     );
